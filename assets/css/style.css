@@ -1,0 +1,204 @@
+/* ! Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+/* ! Colors */
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(0, 0%, 40%);
+  --darkGray: hsl(0, 0%, 24%);
+  --lightBlue: hsl(192, 94%, 58%);
+  --blue: hsl(190, 97%, 46%);
+  --darkBlue: hsl(242, 100%, 10%);
+  --animate-speed: 1s;
+}
+
+/* ! Main Styling */
+
+body {
+  font-family: "Abel", sans-serif;
+  color: var(--white);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#header {
+  position: fixed;
+}
+
+#header .logo {
+  max-width: 200px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+/* ! Pages */
+
+#page-1 {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#page-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url("../img/page-1.jpeg") center center/cover;
+}
+
+#page-2 {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#page-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url("../img/page-1.jpeg") center center/cover;
+}
+
+#page-3 {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#page-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url("../img/page-3.jpeg") center center/cover;
+}
+
+#page-4 {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+#page-4::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background: url("../img/page-4.png") center center/cover;
+}
+
+/* ! Page */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 14px;
+  color: var(--darkGray);
+}
+
+.page p {
+  max-width: 62ch;
+}
+
+.page {
+  font-size: 1.3rem;
+}
+
+/* ! Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn:hover {
+  background-color: var(--white);
+  color: var(--darkGray);
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--darkBlue);
+  color: var(--white);
+  text-decoration: none;
+  border: none;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn-primary:hover {
+  background-color: var(--white);
+  color: var(--darkGray);
+}
+
+#page-4 h1 {
+  color: var(--darkBlue);
+}
+
+/* ! Page Animations */
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-1200px);
+  animation: heading var(--animate-speed) forwards ease-in;
+}
+
+#page-1 p {
+  transform: translateX(-1800px);
+  animation: text var(--animate-speed) forwards ease-in 1s;
+}
+
+/* Keyframes */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+}
